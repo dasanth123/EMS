@@ -1,0 +1,325 @@
+/* ================= CSS ================= */
+
+.page {
+  min-height: 100vh;
+  padding: 100px 30px 30px;
+  background: linear-gradient(120deg, #eef2f7, #d9e2ec);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.3s ease;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 28px;
+}
+
+.add-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.table-card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.table-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-card thead {
+  position: sticky;
+  top: 0;
+  background: #334155;
+  z-index: 10;
+}
+
+th {
+  background: #334155;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.edit-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #2563eb;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1001;
+}
+
+.modal input,
+.modal select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cancel {
+  background: #aaa;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.save {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+/* ========== THEME MODES ========== */
+.page.light {
+  background: linear-gradient(120deg, #eef2f7, #d9e2ec);
+  color: #000;
+}
+
+.page.light .header h1 {
+  color: #000;
+}
+
+.page.light .table-card {
+  background: white;
+  color: #000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.page.light table th {
+  background: #334155;
+  color: white;
+}
+
+.page.light table td {
+  border-bottom: 1px solid #eee;
+}
+
+.page.light .add-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.page.light .add-btn:hover {
+  background: #1d4ed8;
+}
+
+.page.light .edit-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.page.light .edit-btn:hover {
+  background: #2563eb;
+}
+
+.page.light .delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.page.light .delete-btn:hover {
+  background: #dc2626;
+}
+
+.page.light .modal-overlay {
+  background: rgba(0,0,0,0.5);
+}
+
+.page.light .modal {
+  background: white;
+  color: #000;
+}
+
+.page.light .modal input,
+.page.light .modal select {
+  background: white;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+.page.light .modal h2 {
+  color: #000;
+}
+
+.page.light .cancel {
+  background: #aaa;
+  color: white;
+}
+
+.page.light .save {
+  background: #2563eb;
+  color: white;
+}
+
+/* ========== DARK MODE ========== */
+.page.dark {
+  background: linear-gradient(120deg, #0f172a, #1e293b);
+  color: #e0e7ff;
+  transition: 0.3s ease;
+}
+
+.page.dark .header h1 {
+  color: #e0e7ff;
+}
+
+.page.dark .table-card {
+  background: #1e293b;
+  color: #e0e7ff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.page.dark table th {
+  background: #0f172a;
+  color: #e0e7ff;
+}
+
+.page.dark table td {
+  color: #e0e7ff;
+  border-bottom: 1px solid #334155;
+}
+
+.page.dark .add-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.page.dark .add-btn:hover {
+  background: #2563eb;
+}
+
+.page.dark .edit-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.page.dark .edit-btn:hover {
+  background: #2563eb;
+}
+
+.page.dark .delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.page.dark .delete-btn:hover {
+  background: #dc2626;
+}
+
+.page.dark .modal-overlay {
+  background: rgba(0,0,0,0.8);
+}
+
+.page.dark .modal {
+  background: #1e293b;
+  color: #e0e7ff;
+}
+
+.page.dark .modal h2 {
+  color: #e0e7ff;
+}
+
+.page.dark .modal input,
+.page.dark .modal select {
+  background: #0f172a;
+  color: #e0e7ff;
+  border: 1px solid #334155;
+}
+
+.page.dark .cancel {
+  background: #475569;
+  color: #e0e7ff;
+}
+
+.page.dark .cancel:hover {
+  background: #64748b;
+}
+
+.page.dark .save {
+  background: #3b82f6;
+  color: white;
+}
+
+.page.dark .save:hover {
+  background: #2563eb;
+}
